@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+:root {
+  /* Theme 1 */
+  --theme1-main-bg: hsl(222, 26%, 31%);
+  --theme1-toggle-keypad-bg: hsl(223, 31%, 20%);
+  --theme1-screen-bg: hsl(224, 36%, 15%);
+  --theme1-key-bg: hsl(225, 21%, 49%);
+  --theme1-key-shadow: hsl(224, 28%, 35%);
+  --theme1-red-key-bg: hsl(6, 63%, 50%);
+  --theme1-red-key-shadow: hsl(6, 70%, 34%);
+  --theme1-orange-key-bg: hsl(30, 25%, 89%);
+  --theme1-orange-key-shadow: hsl(28, 16%, 65%);
+  --theme1-text-dark: hsl(221, 14%, 31%);
+  --theme1-text-white: hsl(0, 0%, 100%);
+
+  /* Theme 2 */
+  --theme2-main-bg: hsl(0, 0%, 90%);
+  --theme2-toggle-keypad-bg: hsl(0, 5%, 81%);
+  --theme2-screen-bg: hsl(0, 0%, 93%);
+  --theme2-key-bg: hsl(185, 42%, 37%);
+  --theme2-key-shadow: hsl(185, 58%, 25%);
+  --theme2-orange-key-bg: hsl(25, 98%, 40%);
+  --theme2-orange-key-shadow: hsl(25, 99%, 27%);
+  --theme2-yellow-key-bg: hsl(45, 7%, 89%);
+  --theme2-yellow-key-shadow: hsl(35, 11%, 61%);
+  --theme2-text-dark: hsl(60, 10%, 19%);
+  --theme2-text-white: hsl(0, 0%, 100%);
+
+  /* Theme 3 */
+  --theme3-main-bg: hsl(268, 75%, 9%);
+  --theme3-toggle-keypad-bg: hsl(268, 71%, 12%);
+  --theme3-screen-bg: var(--theme3-toggle-keypad-bg);
+  --theme3-key-bg: hsl(281, 89%, 26%);
+  --theme3-key-shadow: hsl(285, 91%, 52%);
+  --theme3-cyan-key-bg: hsl(176, 100%, 44%);
+  --theme3-cyan-key-shadow: hsl(177, 92%, 70%);
+  --theme3-dark-violet-key-bg: hsl(268, 47%, 21%);
+  --theme3-magenta-key-shadow: hsl(290, 70%, 36%);
+  --theme3-text-yellow: hsl(52, 100%, 62%);
+  --theme3-text-dark-blue: hsl(198, 20%, 13%);
+  --theme3-text-white: hsl(0, 0%, 100%);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--theme1-main-bg);
+  font-family: "League Spartan", sans-serif;
+}
+
+/* THEME  */
+
+body.theme-1 {
+  background-color: var(--theme1-main-bg);
+}
+
+body.theme-2 {
+  background-color: var(--theme2-main-bg);
+}
+
+body.theme-3 {
+  background-color: var(--theme3-main-bg);
+}
+
+body.theme-2 .checkmark {
+  background-color: var(--theme2-orange-key-bg);
+}
+
+body.theme-2 .checkmark:hover {
+  background-color: hsl(25, 98%, 70%) !important;
+}
+
+body.theme-2 .theme-toggle {
+  background-color: var(--theme2-toggle-keypad-bg);
+}
+
+body.theme-2 .theme-preference h5,
+body.theme-2 h1,
+body.theme-2 li {
+  color: var(--theme2-text-dark);
+}
+
+body.theme-2 .output {
+  background-color: var(--theme2-screen-bg);
+  color: var(--theme2-text-dark);
+}
+
+body.theme-2 .keypad-grid {
+  background-color: var(--theme2-toggle-keypad-bg);
+}
+
+body.theme-2 .keypad-grid > button {
+  background-color: var(--theme2-yellow-key-bg);
+  box-shadow: 0 4px var(--theme2-yellow-key-shadow);
+}
+
+body.theme-2 .keypad-grid > button:hover {
+  background-color: hsl(45, 7%, 95%);
+}
+
+body.theme-2 .background-red {
+  background-color: var(--theme2-orange-key-bg) !important;
+  box-shadow: 0 4px var(--theme2-orange-key-shadow) !important;
+}
+
+body.theme-2 .background-red:hover {
+  background-color: hsl(25, 98%, 70%) !important;
+}
+
+body.theme-2 .background-blue {
+  background-color: var(--theme2-key-bg) !important;
+  box-shadow: 0 4px var(--theme2-key-shadow) !important;
+}
+
+body.theme-2 .background-blue:hover {
+  background-color: hsl(185, 42%, 70%) !important;
+}
+
+body.theme-3 .checkmark {
+  background-color: var(--theme3-cyan-key-bg);
+}
+
+body.theme-3 .checkmark:hover {
+  background-color: hsl(176, 100%, 70%) !important;
+}
+
+body.theme-3 .theme-toggle {
+  background-color: var(--theme3-toggle-keypad-bg);
+}
+
+body.theme-3 .theme-preference h5,
+body.theme-3 h1,
+body.theme-3 li {
+  color: var(--theme3-text-yellow);
+}
+
+body.theme-3 .output {
+  background-color: var(--theme3-screen-bg);
+  color: var(--theme3-text-yellow);
+}
+
+body.theme-3 .keypad-grid {
+  background-color: var(--theme3-toggle-keypad-bg);
+}
+
+body.theme-3 .keypad-grid > button {
+  background-color: var(--theme3-dark-violet-key-bg);
+  box-shadow: 0 4px var(--theme3-magenta-key-shadow);
+  color: var(--theme3-text-yellow);
+}
+
+body.theme-3 .keypad-grid > button:hover {
+  background-color: hsl(268, 47%, 45%) !important;
+}
+
+body.theme-3 .background-red {
+  background-color: var(--theme3-cyan-key-bg) !important;
+  box-shadow: 0 4px var(--theme3-cyan-key-shadow) !important;
+  color: var(--theme3-text-dark-blue) !important;
+}
+
+body.theme-3 .background-red:hover {
+  background-color: hsl(176, 100%, 70%) !important;
+}
+
+body.theme-3 .background-blue {
+  background-color: var(--theme3-key-bg) !important;
+  box-shadow: 0 4px var(--theme3-key-shadow) !important;
+}
+
+body.theme-3 .background-blue:hover {
+  background-color: hsl(281, 89%, 60%) !important;
+}
+
+/* THEME */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  width: 100%;
+}
+
+.calculator-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.calculator-header h1 {
+  color: var(--theme1-text-white);
+}
+
+.theme-preference {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-preference h5 {
+  margin: 0 2em 0 0;
+  color: var(--theme1-text-white);
+}
+
+.theme-toggle {
+  border-radius: 20px;
+  padding: 0 3px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--theme1-key-shadow);
+}
+
+.theme-toggle > input {
+  margin: 0.3em;
+}
+
+.custom-radio-btn {
+  width: 20px;
+  height: 20px;
+  /* border: 2px solid #fff; */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-radio-btn .checkmark {
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.custom-radio-btn input {
+  display: none;
+}
+
+.custom-radio-btn input:checked + .checkmark {
+  opacity: 1;
+}
+
+.checkmark {
+  cursor: pointer;
+  background-color: var(--theme1-red-key-bg);
+}
+
+.checkmark:hover {
+  background-color: hsl(6, 63%, 75%);
+}
+
+.theme-number {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+}
+
+.theme-number ol {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: var(--theme1-text-white);
+}
+
+ol li {
+  padding: 6px;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: minmax(70px, auto) auto;
+}
+
+.output {
+  width: 100%;
+  background-color: var(--theme1-screen-bg);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-size: 32px;
+  color: var(--theme1-text-white);
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.output span {
+  padding: 25px 20px;
+}
+
+.keypad-grid {
+  padding: 20px;
+  border-radius: 10px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 50px);
+  background-color: var(--theme1-toggle-keypad-bg);
+}
+
+.keypad-grid > button {
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  margin-left: 5px;
+  font-family: "League Spartan", sans-serif;
+  color: var(--theme1-text-dark);
+  box-shadow: 0 4px var(--theme1-key-shadow);
+  transition: background-color 0.3s;
+}
+
+.keypad-grid > button:hover {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.background-blue {
+  background-color: var(--theme1-key-bg);
+  color: var(--theme1-text-white) !important;
+  transition: background-color 0.3s;
+}
+
+.background-blue:hover {
+  background-color: hsl(225, 21%, 75%);
+}
+
+.background-red {
+  background-color: var(--theme1-red-key-bg);
+  color: var(--theme1-text-white) !important;
+  box-shadow: 0 4px var(--theme1-red-key-shadow) !important;
+  transition: background-color 0.3s;
+}
+
+.background-red:hover {
+  background-color: hsl(6, 63%, 75%);
+}
+
+@media screen and (min-width: 768px) {
+  .claculator-grid {
+    grid-template-columns: 400px;
+    /* grid-template-rows: minmax(70px, auto) auto; */
+  }
+
+  .container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .theme-1 .keypad-grid {
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: repeat(6, 40px); */
+    grid-gap: 18px;
+  }
+
+  .calculator-flex {
+    width: 30%;
+  }
+}
